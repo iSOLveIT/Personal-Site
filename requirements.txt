@@ -1,0 +1,5 @@
+﻿Flask==1.1.1
+Flask-Mail==0.9.1
+email-verifier==1.0.0
+simplejson==3.16.0
+gunicorn==19.9.0
