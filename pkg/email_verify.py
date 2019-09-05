@@ -5,10 +5,10 @@ import simplejson as json
 
 # Config email verifier
 
-verifier = Client("at_xpgLenoojRMjEwBUZwILCtt7KvxMJ")
+verifier = Client("api_key")
 
 
-def emailVerifier(email='adom.466@gmail.com'):
+def emailVerifier(email_address):
     # Retrieve an info for the given email address
     try:
         f = verifier.get(email,  {'validateSMTP': 0, '_hardRefresh': 1}) # Verify email using api from whoisxmlapi.com
