@@ -1,6 +1,7 @@
 from emailverifier import Client
 from emailverifier import exceptions
 import simplejson as json
+from distutils.util import strtobool
 
 
 # Config email verifier
@@ -8,7 +9,7 @@ import simplejson as json
 verifier = Client("at_xpgLenoojRMjEwBUZwILCtt7KvxMJ")
 
 
-def emailVerifier(email='adom.466@gmail.com'):
+def emailVerifier(email):
     # Retrieve an info for the given email address
     try:
         f = verifier.get(email,  {'validateSMTP': 0, '_hardRefresh': 1}) # Verify email using api from whoisxmlapi.com
@@ -22,17 +23,25 @@ def emailVerifier(email='adom.466@gmail.com'):
         catch_all_check = data['catchAllCheck']
         free_check = data['freeCheck']
 
+        dispose = str(disposable_check).capitalize()
+        catch = str(catch_all_check).capitalize()
+        free = str(free_check).capitalize()
+
+        dispose_check = strtobool(dispose)
+        catch_check = strtobool(catch)
+        freeCheck = strtobool(free)
+
         # Conditions
-        if disposable_check == 'true' or catch_all_check == 'true':
+        if bool(dispose_check) == True or bool(catch_check) == True:
             msg = "We do not recognize this email address. Please provide a valid email address."
             resp = {'message':msg, 'status_code':400}
             return resp
-        elif free_check == 'false':
+        elif bool(freeCheck) == False:
             msg = "Please use an email address from a free email provider like Gmail, Hotmail,etc."
             resp = {'message':msg, 'status_code':400}
             return resp
 
-        msg = "Email has been verified and message has been sent."
+        msg = "Email is verified and message has been sent."
         resp = {'message':msg, 'status_code':200}
         return resp
     except exceptions.HttpException:
