@@ -2,8 +2,8 @@
   color: #ffff;
   background:#000033;
   padding: 20px;
-  border: double thin #f18900;
-  transition: 1.25s ease-in-out;
+  border: double medium #f18900;
+  transition: 0.75s linear;
 }
 
 .ani_btn:hover{

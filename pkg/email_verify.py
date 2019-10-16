@@ -45,11 +45,11 @@ def emailVerifier(email):
         resp = {'message':msg, 'status_code':200}
         return resp
     except exceptions.HttpException:
-        msg = "Sorry, an error has occured. Please try again later."
+        msg = "Sorry, we cannot access email service now. Please try again later."
         resp = {'message':msg, 'status_code':500}
         return resp
     except exceptions.GeneralException:
-        msg = "Sorry, an error has occured. Please try again later."
-        resp = {'message':msg, 'status_code':400}
+        msg = "Sorry, we cannot access email service now. Please try again later."
+        resp = {'message':msg, 'status_code':500}
         return resp
     

@@ -911,27 +911,4 @@ h1, h2, h3, h4, h5,
       background: #f18900; }
     .progress-bar.color-2 span {
       color: #f18900; }
-  .progress-bar.color-3 {
-    background: #000033; }
-    .progress-bar.color-3:after {
-      background: #000033; }
-    .progress-bar.color-3 span {
-      color: #000033; }
-  .progress-bar.color-4 {
-    background: #f18900; }
-    .progress-bar.color-4:after {
-      background: #f18900; }
-    .progress-bar.color-4 span {
-      color: #f18900; }
-  .progress-bar.color-5 {
-    background: #000033; }
-    .progress-bar.color-5:after {
-      background: #000033; }
-    .progress-bar.color-5 span {
-      color: #000033; }
-  .progress-bar.color-6 {
-    background: #f18900; }
-    .progress-bar.color-6:after {
-      background: #f18900; }
-    .progress-bar.color-6 span {
-      color: #f18900; }
+  

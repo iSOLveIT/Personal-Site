@@ -1,7 +1,7 @@
 from pkg import app
-import secrets
+import os
 
-app.config['SECRET_KEY'] = secrets.token_hex(75)
+app.config['SECRET_KEY'] = os.urandom(75)
 
 if __name__ == '__main__':
     app.run()
