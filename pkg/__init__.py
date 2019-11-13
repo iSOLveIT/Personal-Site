@@ -5,7 +5,7 @@ from flask_mail import Mail
 app = Flask(__name__)
 
 # EMAIL DETAILS
-_mail_log = {'e-mail':'isolveitgroup@gmail.com', 'pswd':'enbmokslplqokjed'}
+_mail_log = {'e-mail':'isolveitgroup@gmail.com', 'pswd':'enbmokslplqokjed'} # Password was generated with the app specific password but needed a 2-factor authentication
 
 # Config Mail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
