@@ -6,7 +6,7 @@ from pkg import mail
 
 def sendEmail(_name, _subject, _email, _body):
     # SEND EMAIL
-    _recipient = 'recipient_email'
+    _recipient = 'isolveitgroup@gmail.com'
     msg = Message(_subject, sender=('iSOLveIT Contact', 'isolveitgroup@gmail.com'), recipients=[_recipient])
     assert msg.sender == 'iSOLveIT Contact <isolveitgroup@gmail.com>'
     msg.body = f'''{_body}
