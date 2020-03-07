@@ -7,8 +7,8 @@ from pkg import mail
 def sendEmail(_name, _subject, _email, _body):
     # SEND EMAIL
     _recipient = 'recipient_email'
-    msg = Message(_subject, sender=('Subject', 'sender_email'), recipients=[_recipient])
-    assert msg.sender == "Subject <sender_email>"
+    msg = Message(_subject, sender=('iSOLveIT Contact', 'isolveitgroup@gmail.com'), recipients=[_recipient])
+    assert msg.sender == 'iSOLveIT Contact <isolveitgroup@gmail.com>'
     msg.body = f'''{_body}
 
 
@@ -23,8 +23,8 @@ Date Sent:  {dt.now().strftime('%B %d, %Y, %H:%M ') + 'GMT'}
 def replyMessage(_email, _sender):
     # REPLY EMAIL
     _subj = 'Message Received'
-    mesg = Message(_subj, sender=('Subject', 'sender_email'), recipients=[_email])
-    assert mesg.sender == "Subject <sender_email>"
+    mesg = Message(_subj, sender=('iSOLveIT Contact', 'isolveitgroup@gmail.com'), recipients=[_email])
+    assert mesg.sender == 'iSOLveIT Contact <isolveitgroup@gmail.com>'
     mesg.body = f'''Hello {_sender},
 The message sent by {_sender} to iSOLveIT has been received. iSOLveIT will contact you within 24 hours.
 
