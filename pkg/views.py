@@ -1,17 +1,39 @@
+# Third-party modules 
 from flask.views import MethodView
 from flask import render_template, request, redirect, url_for, flash
+# Local modules 
 from .contact import sendEmail, replyMessage
 from .email_verify import emailVerifier
 
 
 # View for Index Route
 class IndexEndpoint(MethodView):
-    # This function executes when request method for this route = get
+    """View for Index Route
+    
+    Arguments:
+        MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
+    
+    Returns:
+        get() and post() methods
+    """
+
     def get(self):
+        """This function executes when request method for this route = get
+        
+        Returns:
+            html template -- renders html template
+        """
+
         return render_template('index.html'), 200
-    # This function executes when request method for this route = post
+
 
     def post(self):
+        """This function executes when request method for this route = post
+        
+        Returns:
+            index.html -- redircet to the contact-secetion of index route 
+        """
+
         fullname = request.form['nameInput']
         subject = request.form['subjInput']
         email = request.form['emailInput']
