@@ -7,7 +7,7 @@ from distutils.util import strtobool    # module for converting strings to boole
 
 
 # Config email verifier
-verifier = Client("at_xpgLenoojRMjEwBUZwILCtt7KvxMJ")
+verifier = Client("api_key")
 
 
 def emailVerifier(email):
