@@ -4,10 +4,11 @@ from emailverifier import exceptions
 import simplejson as json
 # Built-in modules 
 from distutils.util import strtobool    # module for converting strings to boolean 
+import os
 
 
 # Config email verifier
-verifier = Client("api_key")
+verifier = Client(str(os.environ.get('EMAIL_VERIFIER')))
 
 
 def emailVerifier(email):
