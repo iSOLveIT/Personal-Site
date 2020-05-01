@@ -1,5 +1,5 @@
 # iSOLveIT
-*A portfolio website*
+*A portfolio website hosted with Heroku*
 
 ## Installation
 * First you have to get [Python](https://www.python.org/) installed on your computer.
@@ -20,7 +20,9 @@
 
 * NOTE: 
     * If you intend using this project in the productive environment do not use the development server.
-    * Make sure debug=True is cleared in a productive environment
+    * Make sure `debug=True` is cleared in a productive environment
+	* In a productive environment make sure `threaded=True` is used only if your server can handle threading. Else it is better to clear it
+
 ## What does the app achieve?
 * The app is a single page app that gives information about a developer's coding skills, personality, achievements and contact details 
 

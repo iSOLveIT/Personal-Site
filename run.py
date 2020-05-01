@@ -6,4 +6,4 @@ import os
 app.config['SECRET_KEY'] = os.urandom(75)   #Secret key
 
 if __name__ == '__main__':
-    app.run(threaded=True)
+    app.run(debug=True, threaded=True)  # threaded - launches a new thread on each request
