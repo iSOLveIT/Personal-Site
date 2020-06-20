@@ -33,7 +33,7 @@ def apply_headers(response):
     algorithm = x if (x:='br') in compression else 'gzip'
     app.config['COMPRESS_ALGORITHM'] = algorithm    # configure compress algorithm
 
-    response.headers["Strict-Transport-Security"] = "max-age=63072000; includeSubdomains"
+    response.headers["Strict-Transport-Security"] = "max-age=63072000"
     response.headers["X-XSS-Protection"] = "1; mode=block"
     response.headers["X-Frame-Options"] = "SAMEORIGIN"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
