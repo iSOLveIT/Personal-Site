@@ -3,3 +3,4 @@ Flask-Mail
 email-verifier
 simplejson
 gunicorn
+flask-compress

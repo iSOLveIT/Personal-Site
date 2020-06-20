@@ -12,21 +12,31 @@
     </script>
 
     <title>i SOLveIT </title>
+    <!--Metadata-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+    <meta name="description" content="A web developer in Ghana with the core value of providing quality services to clients">
+    <meta name="keywords" content="iSOLveIT, isolveit, i solve it, Web Developer, Python Developer, Ghana, Flask Developer, Python Developers in Ghana, MongoDB, MySQL, AGMS, Agona Swedru, Agona, Swedru">
+    <!-- Preload -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com/gtag/js?id=UA-143795624-2" type="text/javascript" async as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montez&display=swap" as="style" type="text/css">
+    <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" type="text/css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" type="text/javascript" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" as="script">
+    <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" type="text/javascript" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" as="script">
+    <!-- Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montez&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" type="text/css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}">
+
+    <!--Favicon-->
     <link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=1CgVfUmvQwr8XTtdtFqof4H5zsTgR_FL5" type="image/png">
   </head>
+  <!-- Body Tag -->
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
   
     <div class="site-wrap"> 
@@ -44,24 +54,25 @@
         
         <div class="container-fluid">
           <div class="d-flex align-items-center">
-            <div class="site-logo"><a href="/" >iSOLveIT</a></div>
+            <div class="site-logo"><a href="/" aria-label="i solve it (brand name)">iSOLveIT</a></div>
             <div>
               <nav class="site-navigation position-relative text-right" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                  <li><a href="#home-section" class="nav-link">Home</a></li>
-                  <li><a href="#about-section" class="nav-link">About</a></li>
-                  <li><a href="#work-section" class="nav-link">Work</a></li>
-                  <li><a href="#services-section" class="nav-link">Services</a></li>
+                  <li><a href="#home-section" class="nav-link" aria-label="Home link">Home</a></li>
+                  <li><a href="#about-section" class="nav-link" aria-label="About link">About</a></li>
+                  <li><a href="#skill-section" class="nav-link" aria-label="Skills link">Skills</a></li>
+                  <li><a href="#work-section" class="nav-link" aria-label="Projects link">Projects</a></li>
+                  <li><a href="#services-section" class="nav-link" aria-label="Services link">Services</a></li>
                 </ul>
               </nav>
             </div>
             <div class="ml-auto">
               <nav class="site-navigation position-relative text-right" role="navigation">
                 <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block">
-                  <li class="cta"><a href="#contact-section" class="nav-link">Contact</a></li>
+                  <li class="cta"><a href="#contact-section" class="nav-link" aria-label="Contact link">Contact</a></li>
                 </ul>
               </nav>
-              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right" aria-label="Mobile menu"><span class="icon-menu h2" style="color:#f18900"></span></a>
             </div>
           </div>
         </div>
@@ -70,16 +81,19 @@
       <div class="intro-section" id="home-section">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-4 mr-auto" data-aos="fade-up">
-              <h1  style="color:#fff; line-height: 1.7cm;">Hello! <br> <b style="color: #ffff;">I'm <i style="font-size: 70pt; color: #f18900;">i</i>SOLveIT</b> </h1><br>
-              <p class="mb-5" style="color:#ffff;">I create web applications that are responsive, scalable, creative, functional and costless which helps my customers gain huge competitive advantage over their competitors.</p>
-              <a href="https://drive.google.com/file/d/13QW6FrPlC-u_5pT46mWWNDjmsgfC64E7/view?usp=drivesdk" target="_blank" download="iSOLveIT CV.pdf" style="color:#ffffff;">
-                <button class="ani_btn btn py-3 px-5" >Download CV</button>
+            <div class="col-lg-6 mr-auto" data-aos="fade-right">
+              <h1  style="color:#fff; line-height: 1.7cm;">Hello! <br> I'm <span style="font-family: 'Montez', cursive;"><b style="font-size: 50pt; color: #f18900;">R</b>andy</span></h1><br>
+              <p class="mb-5" style="color:#ffff;">I design and develop web applications to help the client realize a positive <b>difference</b> and make their life <b>simple</b></p>
+              <a href="https://drive.google.com/file/d/1V7BU2AO-RhcHazTq-uL__nckCyKnhLQv/view?usp=sharing" target="_blank" rel="noreferrer" download="iSOLveIT CV.pdf" style="color:#ffffff;" aria-label="Resume(CV) link">
+                <button class="ani_btn btn py-3 px-5 mb-2" style="font-size: medium;" >Download CV</button>
               </a>
             </div>
-            <div class="col-lg-2 ml-auto"  data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-2 ml-auto"  data-aos="fade-left" data-aos-delay="100">
               <figure class="img-absolute">
-                <img src="https://drive.google.com/uc?export=view&id=1NufJMw3bdN3GU9Q79DIcq-k1JIZJLnbM" alt="Image" class="img-fluid">
+              <picture>
+                <source type="image/webp" srcset="../static/images/isolveit.webp"> 
+                <img src="../static/images/isolveit.jpg" alt="Image of the owner of the website" class="img-fluid">              
+              </picture>
               </figure>
             </div>
           </div>
@@ -93,76 +107,206 @@
               <div class="mb-5">
                 <span class="section-sub-title d-block">About iSOLveIT</span>
                 <h2 class="section-title">Who Am I?</h2>
-                <p>Hello! My name is Duodu Randy. I am a <b>Programmer</b> and a student at the University of Professional Studies Accra, Ghana.
-                  I develop web applications using variety of modern web technologies.
-                  I like reading about latest web development technologies, artificial intelligence and data science.
-                  </p>
+                <p>                  
+                  Hello! My name is Duodu Randy. I am a passionate and hardworking <b style="font-weight: bold;">Web Application Developer</b>.
+                </p>
+                <p>
+                  I am a skilled, task-oriented, and dedicated team worker. I love to update my knowledge about the latest web development technologies.
+                </p>
+                <p>
+                  I enjoy reading about tech blog and enjoy sharing my knowledge with other developers or non-developer.
+                </p>
               </div>
             </div>
 
             <div class="col-lg-6">
               <div class="image-absolute-box" >
-                <div class="box" data-aos="fade-up" >
-                  <div class="icon-wrap"><span class="icon-vector"></span></div>
+                <div class="box" data-aos="fade-up" style="z-index:20">
+<!--                  <div class="icon-wrap"><span class="icon-vector"></span></div>-->
                   <h3 style="color:#ffff; font-size: 20pt;">Creativity is the key</h3>
-                  <p style="color:#ffff;">I love to be creative because it helps me build web applications that are original, expressive, professional, imaginative and serves their purposes.</p>
+                  <p style="color:#ffff;">I am creative because creativity makes me original, expressive, professional, imaginative, and resourceful.</p>
                 </div>
-                <img src="https://drive.google.com/uc?export=view&id=18F_hkfbj7aLcnDcxkOS9BDrqxpQnb_Kd" alt="Image" class="img-fluid">
+                <picture>
+                  <source type="image/webp" srcset="../static/images/creative.webp"> 
+                  <img src="../static/images/creative.jpg" alt="Image of a Lapotop on a desk" class="img-fluid">              </picture>
+                </figure>
               </div>
             </div>
           </div>
         </div>
-      </div>  
-          
+      </div>
+
     </div>
 
-    <div class="site-section section-2" id="work-section">
+    <div class="site-section bg-light" id="skill-section" >
       <div class="container">
         <div class="row">
           <div class="col-lg-6 mb-5">
-            <span class="section-sub-title d-block">Work Experience</span>
-            <h2 class="section-title">My Projects</h2>
-            <p>These are the projects I have built and deployed so far.</p>
+            <span class="section-sub-title d-block">Technical Skills</span>
+            <h2 class="section-title">My Technologies</h2>
+            <p>These are the technologies I work with</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+      <div class="row service_sub">
+        <div class="col" data-aos="fade-up" style="text-align: left;">
+          <div class="alert alert-main" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;Python
+          </div>
+          <div class="alert alert-alternate" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;JavaScript
+          </div>
+          <div class="alert alert-main" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;Flask Framework
+          </div>
+          <div class="alert alert-alternate" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;HTML
+          </div>
+          <div class="alert alert-main" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;CSS
+          </div>
+          <div class="alert alert-alternate" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;Git
+          </div>
+          <div class="alert alert-main" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;Bootstrap
+          </div>
+          <div class="alert alert-alternate" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;JQuery
+          </div>
+        </div>
+
+        <div class="col" data-aos="fade-down" style="text-align: left;">
+          <div class="alert alert-alternate" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;MongoDB NoSQL Database
+          </div>
+          <div class="alert alert-main" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;MySQL Database
+          </div>
+          <div class="alert alert-alternate" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;Linux OS
+          </div>
+          <div class="alert alert-main" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;Heroku Hosting Service
+          </div>
+          <div class="alert alert-alternate" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;Linode Cloud Service
+          </div>
+          <div class="alert alert-main" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;GitHub
+          </div>
+          <div class="alert alert-alternate" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;Netlify
+          </div>
+          <div class="alert alert-main" role="alert">
+            <span class="icon-check-circle"></span> &nbsp;PyTest
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="site-section" id="work-section" data-aos="fade-up-left">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5">
+            <span class="section-sub-title d-block">Projects</span>
+            <h2 class="section-title">Recent Work</h2>
+            <p>On my developer journey, these are the projects I have built and deployed</p>
           </div>
         </div>
 
       </div>
 
-      <div class="owl-carousel nonloop-block-13">
-
-          <a class="work-thumb" href="http://www.agmschool.org" target="_blank">
-            <div class="work-text">
-              <h3>Amazing Montessori School</h3>
-              <span class="category">Website for a School</span>
+      <div class="container">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne" style="background-color: #000033;">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" style="color: #ff9b19; font-size:large"
+                type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  2020
+                </button>
+              </h2>
             </div>
-            <img src="https://drive.google.com/uc?export=view&id=153Buw9vrP5T8DaKJMJ9OdQAYn9BrG-Ph" alt="Image" class="img-fluid">
-          </a> 
-
-          <a class="work-thumb" href="https://iscissor.herokuapp.com/ishort" target="_blank">
-            <div class="work-text">
-              <h3>i SHOrteNER</h3>
-              <span class="category">URL Shortener Website</span>
+        
+            <div id="collapseOne" class="collapse show p-4" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="row service_sub">
+                <div class="col-4">
+                  <div class="card rounded" style="width: 18rem;">
+                    <div class="card-img-top" id="mysite"></div>
+                    <div class="card-body">
+                      <h4 class="card-title">Portfolio Website</h4>
+                      <p class="card-text">Portfolio website to showcase my skills to potential clients</p>
+                      <a href="https://isolveit.herokuapp.com" class="ani_btn btn py-2 px-3" aria-label="Link to portfolio project">Goto Project</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card rounded" style="width: 18rem;">
+                    <div class="card-img-top" id="quizApp"></div>
+                    <div class="card-body">
+                      <h4 class="card-title">Quiz App</h4>
+                      <p class="card-text">A website for a school to conduct quizzes</p>
+                      <a href="https://nursingcollege.herokuapp.com/dashboard/10087873" class="ani_btn btn py-2 px-3" aria-label="Link to quiz app project">Goto Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <img src="https://drive.google.com/uc?export=view&id=1WTSKJiRqTr2ImlHu2zUdq9rkQqm2XojJ" alt="Image" class="img-fluid">
-          </a>
+          </div>
 
-        <a class="work-thumb" href="https://nursingcollege.herokuapp.com/dashboard/10087873" target="_blank">
-            <div class="work-text">
-              <h3>Quiz App</h3>
-              <span class="category">E-Learning Website</span>
+          <div class="card">
+            <div class="card-header" id="headingTwo" style="background-color: #000033;">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" style="color: #ff9b19; font-size:large" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  2019
+                </button>
+              </h2>
             </div>
-            <img src="https://drive.google.com/uc?export=view&id=1h5ne1qcZ3zMG76zWGoHDVr8pnwUYCCIo" alt="Image" class="img-fluid">
-          </a>
-
-          <a class="work-thumb" href="https://isolveit.herokuapp.com" target="_blank">
-            <div class="work-text">
-              <h3>iSOLveIT</h3>
-              <span class="category">Portfolio Website</span>
+            <div id="collapseTwo" class="collapse p-4" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="row service_sub">
+                <div class="col-4">
+                  <div class="card rounded" style="width: 18rem;">
+                    <div class="card-img-top" id="urlcut"></div>
+                    <div class="card-body">
+                      <h4 class="card-title">i SHOrteNER</h4>
+                      <p class="card-text">A website for cutting long website address (urls) to short website address </p>
+                      <a href="https://iscissor.herokuapp.com/ishort" class="ani_btn btn py-2 px-3" aria-label="Link to URL cutter project">Goto Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <img src="https://drive.google.com/uc?export=view&id=1t7C_RpOrKQtpkjtgE2nml6Y8Li27ARD0" alt="Image" class="img-fluid">
-          </a> 
+          </div>
 
-
+          <div class="card">
+            <div class="card-header" id="headingThree" style="background-color: #000033;">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" style="color: #ff9b19; font-size:large" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  2018
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse p-4" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="row service_sub">
+                <div class="col-4">
+                  <div class="card rounded" style="width: 18rem;">
+                    <div class="card-img-top" id="agms"></div>
+                    <div class="card-body">
+                      <h4 class="card-title">Amazing Montessori School</h4>
+                      <p class="card-text">A website for a school to present the school online</p>
+                      <a href="https://www.agmschool.org" class="ani_btn btn py-2 px-3" aria-label="Link to school website project">Goto Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -173,59 +317,64 @@
           <div class="col-lg-6 mb-5">
             <span class="section-sub-title d-block">Services</span>
             <h2 class="section-title">Services</h2>
-            <p>I provide a full-range of web services.</p>
+            <p>These are the services I offer to clients</p>
           </div>
         </div>
 
       </div>
         
-      <div class="owl-carousel nonloop-block-14">     
+      <div class="owl-carousel nonloop-block-14" data-aos="zoom-in">
         <div class="service">
           <div>
             <span class="icon-web display-4 mb-4 d-inline-block" style="color: #f18900;" ></span>
-            <h3 style="font-size: 16pt;">WebApp Service</h3>
-            <p>I offer high-end unique webapp designs, professional content creation and webapp hosting, management or relocation services.</p>
+            <h3 style="font-size: 16pt;">Web App Developement</h3>
+            <p><i>I develop beautiful and cost-effective websites that perform well, are accessible, and are SEO-friendly.</i></p>
           </div>
         </div>
 
         <div class="service">
           <div>
-            <span class="icon-help display-4 mb-4 d-inline-block" style="color: #000033;"></span>
-            <h3>24/7 Support</h3>
-            <p>I am forever ready to assist customers on issues pertaining to webapp creation, management or any other. </p>
+            <span class="icon-developer_mode display-4 mb-4 d-inline-block" style="color: #f18900;"></span>
+            <h3>API Services</h3>
+            <p><i>I write extensible application programming interface for applications.</i></p>
           </div>
         </div>
 
         <div class="service">
           <div>
-            <span class="icon-search display-4 mb-4 d-inline-block" style="color: #f18900;"></span>
-            <h3>Research</h3>
-            <p>Based on the needs of your project, I can assist you in performing user research for your webapp design process.</p>
+            <span class="icon-cloud display-4 mb-4 d-inline-block" style="color: #000033;"></span>
+            <h3>Web Hosting</h3>
+            <p><i>I provide website deployment services on hosting platforms like Linode, Heroku, and Netlify.</i></p>
           </div>
         </div>
 
         <div class="service">
           <div>
-            <span class="icon-envelope display-4 mb-4 d-inline-block" style="color: #000033;"></span>
+            <span class="icon-database display-4 mb-4 d-inline-block" style="color: #f18900;"></span>
+            <h3>Database Management</h3>
+            <p><i>I architect SQL or NoSQL database for application usage.</i></p>
+          </div>
+        </div>
+
+        <div class="service">
+          <div>
+            <span class="icon-track_changes display-4 mb-4 d-inline-block" style="color: #000033;"></span>
             <h3>Version Control Service</h3>
-            <p>I provide customers with help in managing changes to their source code over time.</p>
+            <p><i>I track and maintain changes or versions of applications using softwares like Git, GitHub & GitLab.</i></p>
           </div>
         </div>
       </div>
     </div>
 
-
     <div class="site-section" id="contact-section">
       <div class="container">
         <div class="row justify-content-center">
 
-          <div class="col-md-7">
+          <div class="col-md-7" data-aos="zoom-in-right">
             <h2 class="section-title mb-3">Message Me</h2>
             <p class="mb-5">
-              Need more information or enquiries about <strong><em>iSOLveIT</em></strong> and the services I
-              provide or want to know about contract agreements. Message <strong><em>iSOLveIT</em></strong>
-              by filling the forms belows.
-              <br><small class="text-muted" style="font-size: 8pt; color:#000033;">The data is deleted as soon as iSOLveIT receive your email. Thank you.</small>
+              Contact <strong>Randy</strong> by filling the forms belows
+              <br><small style="font-size: 10pt; color:#000033;">The data is deleted as soon as iSOLveIT receive your email. Thank you.</small>
             </p>
 
             <form action="/" method="POST" class='contact_form' data-aos="fade">
@@ -236,26 +385,23 @@
               </div>
 
               <div class="form-group row">
-                <div class="col-md-8 mb-3 mb-lg-0">
-                  <input type="text" class="form-control" name="nameInput" placeholder="Full Name" required>
+                <div class="col-md-12">
+                  <label for="inputName">Full Name</label>
+                  <input type="text" class="form-control" id="inputName" name="nameInput" placeholder="Enter name here" required>
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subjInput" placeholder="Subject" required>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="email" class="form-control" name="emailInput" placeholder="Email" required>
-                  <small class="text-muted" style="font-size: 8pt; color:#000033;">Email address will be verified before message is sent.</small>
+                  <label for="inputEmail">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" name="emailInput" placeholder="Enter email here" required>
+                  <small style="font-size: 10pt; color:#000033;">Email address will be verified before message is sent.</small>
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-md-12">
-                  <textarea class="form-control" name="bodyInput" cols="30" rows="10" placeholder="Write your message here." required></textarea>
+                  <label for="inputBody">Message</label>
+                  <textarea class="form-control" id="inputBody" name="bodyInput" cols="30" rows="10" placeholder="Write your message here" required></textarea>
                 </div>
               </div>
 
@@ -271,8 +417,6 @@
       </div>
     </div>
 
-  
-     
     <footer class="footer-section">
       <div class="container">
         <div class="row">
@@ -281,7 +425,7 @@
               <ul class="list-unstyled footer-links">
                 <li><span class="icon-at" style="color:#f18900; font-size: 26pt;"></span> <i style="margin-left: 10px;">duodurandy19@gmail.com</i></li>
                 <li><span class="icon-envelope" style="color:#000033; font-size: 26pt;"></span> <i style="margin-left: 10px;">Post Office Box SW 328</i></li>
-                <li><span class="icon-phone_iphone" style="color:#f18900; font-size: 26pt;"></span> <i style="margin-left: 10px;">+233 55 477 9371 / +233 27 073 2007</i></li>
+                <li><span class="icon-phone_iphone" style="color:#f18900; font-size: 26pt;"></span> <i style="margin-left: 10px;">+233 55 477 9371 / +233 20 212 4044</i></li>
               </ul>
           </div>
 
@@ -293,10 +437,9 @@
             <h3>Visit My Social Handles</h3>
             <p>Want to know more about me.</p>
               <div class="d-flex mb-5">
-                <a href="https://twitter.com/@lve_it" target="_blank" title="Twitter"><span class="icon-twitter " style="color: #f18900; font-size:30pt; margin-right: 20px;"></span></a>
-                <a href="https://github.com/iSOLveIT" target="_blank" title="Github"><span class="icon-github" style="color: #000033; font-size:30pt; margin-right: 20px;"></span></a>
-                <a href="https://gitlab.com/users/iSOLveIT" target="_blank" title="Gitlab"><span class="icon-gitlab" style="color: #f18900; font-size:30pt; margin-right: 20px;"></span></a>
-                <a href="https://wa.me/233554779371" target="_blank" title="Whatsapp"><span class="icon-whatsapp " style="color: #000033; font-size:30pt; margin-right: 15px;"></span></a>
+                <a href="https://twitter.com/@lve_it" target="_blank" title="Twitter" aria-label="Link to my Twitter handle" rel="noreferrer"><span class="icon-twitter" style="color: #000033; font-size:30pt; margin-right: 20px;"></span></a>
+                <a href="https://github.com/iSOLveIT" target="_blank" title="Github" aria-label="Link to my GitHub profile" rel="noreferrer"><span class="icon-github" style="color: #f18900; font-size:30pt; margin-right: 20px;"></span></a>
+                <a href="https://wa.me/233554779371" target="_blank" title="Whatsapp" aria-label="Link to my Whatsapp handle" rel="noreferrer"><span class="icon-whatsapp" style="color: #000033; font-size:30pt; margin-right: 15px;"></span></a>
               </div>
           </div>
         </div>
@@ -304,33 +447,33 @@
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <div class="border-top pt-5">
-            <p>
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All rights reserved | <b style="font-size:14pt">iSOLveIT.org</b>
+              <p>
+              Copyright &copy; <span id="footer_date"></span> |
+              All rights reserved | <b style="font-size:14pt">iSOLveIT</b>
             </p>
             </div>
           </div>
         </div>
       </div>
-    </footer> 
-  </div> <!-- .site-wrap -->
-
-
-  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    </footer>
+    <!-- .site-wrap -->
 
   
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" type="text/javascript" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" type="text/javascript" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modernizr-custom.js') }}" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/jquery.sticky.min.js') }}"></script>
+
+  
+  <script src="{{ url_for('static', filename='js/main.min.js') }}"></script>
     
   </body>
 </html>

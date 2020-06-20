@@ -35,7 +35,6 @@ class IndexEndpoint(MethodView):
         """
 
         fullname = request.form['nameInput']
-        subject = request.form['subjInput']
         email = request.form['emailInput']
         body = request.form['bodyInput']
             
@@ -53,7 +52,7 @@ class IndexEndpoint(MethodView):
 
         elif verify_email['status_code'] == 200:
             # Return message for success
-            sendEmail(fullname, subject, email, body)   # Message from customer to organization
+            sendEmail(fullname, email, body)   # Message from customer to organization
             replyMessage(email, fullname)   # Message from organization to customer
             message = verify_email['message']
             flash(message=message, category='success')

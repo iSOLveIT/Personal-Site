@@ -31,6 +31,7 @@
 * The app was designed as a package to make the code maintainable.
 * The app used the Django MVC architecture by having a different files for holding both the views (views.py) and routes (routes.py in Django known as url.py)
 * The app uses an email verification API to verify the emails sent through the contact form
+* The app uses Flask-Compress to compress static files
 
 ## Directory Structure
 ![Directory Structure](./pkg/static/portfolio.png)

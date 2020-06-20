@@ -3,7 +3,7 @@ from pkg import app
 # Built-in modules 
 import os
 
-app.config['SECRET_KEY'] = os.urandom(75)   #Secret key
+app.config['SECRET_KEY'] = str(os.environ.get('SECRET_KEY'))   #Secret key
 
 if __name__ == '__main__':
-    app.run(debug=True, threaded=True)  # threaded - launches a new thread on each request
+    app.run(debug=True, threaded=True) # ssl_context='adhoc'  # threaded - launches a new thread on each request

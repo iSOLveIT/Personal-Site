@@ -6,7 +6,7 @@ from pkg import mail
 from datetime import datetime as dt
 
 
-def sendEmail(_name, _subject, _email, _body):
+def sendEmail(_name, _email, _body):
     """Function for sending emails
     
     Arguments:
@@ -20,6 +20,7 @@ def sendEmail(_name, _subject, _email, _body):
     """
 
     _recipient = 'isolveitgroup@gmail.com'
+    _subject = 'Enquiry'
     msg = Message(_subject, sender=('iSOLveIT Contact', 'isolveitgroup@gmail.com'), recipients=[_recipient])
     msg.body = f'''{_body}
 
