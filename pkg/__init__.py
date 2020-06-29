@@ -34,6 +34,7 @@ def apply_headers(response):
     app.config['COMPRESS_ALGORITHM'] = algorithm    # configure compress algorithm
 
     response.headers["Strict-Transport-Security"] = "max-age=63072000; includeSubdomains; preload"
+    response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-XSS-Protection"] = "1; mode=block"
     response.headers["X-Frame-Options"] = "SAMEORIGIN"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"

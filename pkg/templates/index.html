@@ -21,18 +21,20 @@
     <!-- Preload -->
     <!-- <link rel="dns-prefetch" href="https://www.googletagmanager.com/gtag/js?id=UA-143795624-2" type="text/javascript" async as="script"> -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Montez&display=swap" as="style" type="text/css">
+    <link rel="preload" href="{{ url_for('static', filename='css/style.min.css') }}" as="style" type="text/css">
     <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" type="text/css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" type="text/javascript" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" as="script">
     <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" type="text/javascript" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" as="script">
+
     <!-- Stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Montez&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}">
 
     <!--Favicon-->
     <link rel="icon" type="image/png" sizes="16x16" href="/../static/images/favicon-32x32.png">
@@ -115,7 +117,7 @@
                   I am a skilled, task-oriented, and dedicated team worker. I love to update my knowledge about the latest web development technologies.
                 </p>
                 <p>
-                  I enjoy reading about tech blog and enjoy sharing my knowledge with other developers or non-developer.
+                  I enjoy reading tech blogs and enjoy sharing my knowledge with other developers or non-developer.
                 </p>
               </div>
             </div>
@@ -173,14 +175,11 @@
           <div class="alert alert-main" role="alert">
             <span class="icon-check-circle"></span> &nbsp;Bootstrap
           </div>
-          <div class="alert alert-alternate" role="alert">
-            <span class="icon-check-circle"></span> &nbsp;JQuery
-          </div>
         </div>
 
         <div class="col" data-aos="fade-down" style="text-align: left;">
           <div class="alert alert-alternate" role="alert">
-            <span class="icon-check-circle"></span> &nbsp;MongoDB NoSQL Database
+            <span class="icon-check-circle"></span> &nbsp;MongoDB Database
           </div>
           <div class="alert alert-main" role="alert">
             <span class="icon-check-circle"></span> &nbsp;MySQL Database
@@ -199,9 +198,6 @@
           </div>
           <div class="alert alert-alternate" role="alert">
             <span class="icon-check-circle"></span> &nbsp;Netlify
-          </div>
-          <div class="alert alert-main" role="alert">
-            <span class="icon-check-circle"></span> &nbsp;PyTest
           </div>
         </div>
       </div>
@@ -224,7 +220,7 @@
       <div class="container">
         <div class="accordion" id="accordionExample">
           <div class="card">
-            <div class="card-header" id="headingOne" style="background-color: #f18900;">
+            <div class="card-header project_head" id="headingOne">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left" style="color: #000033; font-size:large"
                 type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -260,7 +256,7 @@
           </div>
 
           <div class="card">
-            <div class="card-header" id="headingTwo" style="background-color: #f18900;">
+            <div class="card-header project_head" id="headingTwo">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" style="color: #000033; font-size:large" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   2019
@@ -284,7 +280,7 @@
           </div>
 
           <div class="card">
-            <div class="card-header" id="headingThree" style="background-color: #f18900;">
+            <div class="card-header project_head" id="headingThree">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" style="color: #000033; font-size:large" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   2018
@@ -315,7 +311,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 mb-5">
-            <span class="section-sub-title d-block">Services</span>
+            <span class="section-sub-title d-block">Offers</span>
             <h2 class="section-title">Services</h2>
             <p>These are the services I offer to clients</p>
           </div>
@@ -423,9 +419,8 @@
           <div class="col-md-4">
             <h3>Contact Me</h3>
               <ul class="list-unstyled footer-links">
+                <li><span class="icon-at" style="color:#000033; font-size: 26pt;"></span> <i style="margin-left: 10px;">isolveitgroup@gmail.com</i></li>
                 <li><span class="icon-at" style="color:#f18900; font-size: 26pt;"></span> <i style="margin-left: 10px;">duodurandy19@gmail.com</i></li>
-                <li><span class="icon-envelope" style="color:#000033; font-size: 26pt;"></span> <i style="margin-left: 10px;">Post Office Box SW 328</i></li>
-                <li><span class="icon-phone" style="color:#f18900; font-size: 26pt;"></span> <i style="margin-left: 10px;">+233 55 477 9371 / +233 20 212 4044</i></li>
               </ul>
           </div>
 
@@ -437,9 +432,9 @@
             <h3>Visit My Social Handles</h3>
             <p>Want to know more about me.</p>
               <div class="d-flex mb-5">
+                <a href="https://github.com/iSOLveIT" target="_blank" title="Github" aria-label="Link to my GitHub profile" rel="noreferrer"><span class="icon-github" style="color: #000033; font-size:30pt; margin-right: 20px;"></span></a>
+                <a href="https://www.linkedin.com/in/randy-duodu-4823b919a" target="_blank" title="LinkedIn" aria-label="Link to my LinkedIn profile" rel="noreferrer"><span class="icon-linkedin" style="color: #f18900; font-size:30pt; margin-right: 20px;"></span></a>
                 <a href="https://twitter.com/@lve_it" target="_blank" title="Twitter" aria-label="Link to my Twitter handle" rel="noreferrer"><span class="icon-twitter" style="color: #000033; font-size:30pt; margin-right: 20px;"></span></a>
-                <a href="https://github.com/iSOLveIT" target="_blank" title="Github" aria-label="Link to my GitHub profile" rel="noreferrer"><span class="icon-github" style="color: #f18900; font-size:30pt; margin-right: 20px;"></span></a>
-                <a href="https://wa.me/233554779371" target="_blank" title="Whatsapp" aria-label="Link to my Whatsapp handle" rel="noreferrer"><span class="icon-whatsapp" style="color: #000033; font-size:30pt; margin-right: 15px;"></span></a>
               </div>
           </div>
         </div>
