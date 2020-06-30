@@ -21,17 +21,17 @@ mail = Mail(app)    # Instantiate Mail into app
 
 # Configure Flask Compress
 app.config['COMPRESS_MIMETYPES'] = ['text/html','text/css', 'text/javascript', 'application/javascript',
-                                    'application/json', 'application/vnd.ms-fontobject', 
-                                    'image/svg+xml','font/ttf', 'font/woff', 'font/woff2']
+                                    'application/json', 'application/vnd.ms-fontobject','font/ttf',
+                                    'image/svg+xml', 'application/font-sfnt','font/woff2', 'font/woff',]
 
 Compress(app)       # Instantiate Compress into app
 
 # Security measures
 @app.after_request
 def apply_headers(response):
-    compression = request.headers["Accept-Encoding"]
-    algorithm = x if (x:='br') in compression else 'gzip'
-    app.config['COMPRESS_ALGORITHM'] = algorithm    # configure compress algorithm
+    # compression = request.headers["Accept-Encoding"]
+    # algorithm = x if (x:='br') in compression else 'gzip'
+    # app.config['COMPRESS_ALGORITHM'] = algorithm    # configure compress algorithm
 
     response.headers["Strict-Transport-Security"] = "max-age=63072000; includeSubdomains; preload"
     response.headers["X-Content-Type-Options"] = "nosniff"
@@ -39,7 +39,7 @@ def apply_headers(response):
     response.headers["X-Frame-Options"] = "SAMEORIGIN"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
     response.headers["Cache-Control"] = "max-age=10368000"      # 4 months
-
+    
     return response
 
 
