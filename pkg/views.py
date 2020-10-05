@@ -43,14 +43,13 @@ class IndexEndpoint(MethodView):
             
         # Verify Email Address
         verify_email = emailVerifier(email) 
-        if verify_email['status_code'] == 400 or 500:
-            # Return the message for the error
-            flash(message=verify_email['message'], category='danger')
-            return redirect(url_for('index', _anchor='contact-section'))
+        if verify_email['status_code'] == 200:
+            # Return message for success
+            sendEmail(fullname, email, body)   # Message from customer to organization
+            replyMessage(email, fullname)   # Message from organization to customer
+            flash(message=verify_email['message'], category='success')
+            return redirect(url_for('index', _anchor='contact-alert'))
 
-        # Return message for success
-        sendEmail(fullname, email, body)   # Message from customer to organization
-        replyMessage(email, fullname)   # Message from organization to customer
-        flash(message=verify_email['message'], category='success')
-
-        return redirect(url_for('index', _anchor='contact-section'))
+        # Return the message for the error
+        flash(message=verify_email['message'], category='danger')
+        return redirect(url_for('index', _anchor='contact-alert'))
