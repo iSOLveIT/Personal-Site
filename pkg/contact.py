@@ -49,12 +49,12 @@ def replyMessage(_email, _name):
     _mailer = app.config['MAIL_USERNAME']
     mesg = Message("Message Received", sender=('iSOLveIT Contact', f'{_mailer}'), recipients=[_email])
     mesg.body = f'''Hello {_name},
-The message you sent to iSOLveIT has been received. 
-iSOLveIT will contact you within 24 hours.
+The message you sent to Randy has been received. 
+Randy will contact you within 24 hours.
 Thank you.
 
 Regards,
-iSOLveIT Team.
+Randy
 
 Date Sent:  {dt.now(tz=GMT_tz).strftime('%B %d, %Y, %H:%M ') + 'GMT'}
 '''
