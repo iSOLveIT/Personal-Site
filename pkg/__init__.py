@@ -29,9 +29,9 @@ Compress(app)       # Instantiate Compress into app
 # Security measures
 @app.after_request
 def apply_headers(response):
-    # compression = request.headers["Accept-Encoding"]
-    # algorithm = x if (x:='br') in compression else 'gzip'
-    # app.config['COMPRESS_ALGORITHM'] = algorithm    # configure compress algorithm
+    compression = request.headers["Accept-Encoding"]
+    algorithm = x if (x:='br') in compression else 'gzip'
+    app.config['COMPRESS_ALGORITHM'] = algorithm    # configure compress algorithm
 
     response.headers["Strict-Transport-Security"] = "max-age=63072000; includeSubdomains; preload"
     response.headers["X-Content-Type-Options"] = "nosniff"

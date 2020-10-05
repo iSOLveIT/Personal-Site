@@ -29,38 +29,26 @@ def emailVerifier(email):
         data = json.loads(convert)
 
         # Make checks to verify if email is good to be accepted or not.
-        disposable_check = data['disposableCheck']
-        catch_all_check = data['catchAllCheck']
-        free_check = data['freeCheck']
+        disposable_check, catch_all_check, free_check = (str(data['disposableCheck']).capitalize(), 
+                                                            str(data['catchAllCheck']).capitalize(),
+                                                             str(data['freeCheck']).capitalize())
 
-        dispose = str(disposable_check).capitalize()
-        catch = str(catch_all_check).capitalize()
-        free = str(free_check).capitalize()
-
-        dispose_check = strtobool(dispose)
-        catch_check = strtobool(catch)
-        freeCheck = strtobool(free)
-
+        dispose_check, catch_check, freeCheck = (strtobool(disposable_check), 
+                                                    strtobool(catch_all_check), 
+                                                    strtobool(free_check))
+                                                    
         # Conditions to check the validity of an email
         if bool(dispose_check) is True or bool(catch_check) is True:
-            msg = "We do not recognize this email address. Please provide a valid email address."
-            resp = {'message': msg, 'status_code': 400}
-            return resp
+            return {'message': "We do not recognize this email address. Please provide a valid email address.", 
+            'status_code': 400}
         elif bool(freeCheck) is False:
-            msg = "Please use an email address from a free email provider like Google, Microsoft,etc."
-            resp = {'message': msg, 'status_code': 400}
-            return resp
+            return {'message': "Please use an email address from a free email provider like Google, Microsoft,etc.",
+             'status_code': 400}
 
-        msg = "Email is verified and message has been sent."
-        resp = {'message': msg, 'status_code': 200}
-        return resp
+        return {'message': "Email is verified and message has been sent.", 'status_code': 200}
     
     # Exception handlers that prevent the app from breaking down     
     except exceptions.HttpException:
-        msg = "Sorry, we cannot access email service now. Please try again later."
-        resp = {'message': msg, 'status_code': 500}
-        return resp
+        return {'message': "Sorry, Please try again.", 'status_code': 500}
     except exceptions.GeneralException:
-        msg = "Sorry, we cannot access email service now. Please try again later."
-        resp = {'message': msg, 'status_code': 500}
-        return resp
+        return {'message': "Sorry, Please try again.", 'status_code': 500}
