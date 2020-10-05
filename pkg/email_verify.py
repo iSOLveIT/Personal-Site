@@ -18,7 +18,7 @@ def emailVerifier(email):
         email {[str]} -- email address
     
     Returns:
-        resp {[dict]} -- response message and status code
+        {[dict]} -- response message and status code
     """
     # Try and Except Block
     try:
@@ -38,14 +38,9 @@ def emailVerifier(email):
                                                     strtobool(free_check))
                                                     
         # Conditions to check the validity of an email
-        if bool(dispose_check) is True or bool(catch_check) is True:
-            return {'message': "We do not recognize this email address. Please provide a valid email address.", 
-            'status_code': 400}
-        elif bool(freeCheck) is False:
-            return {'message': "Please use an email address from a free email provider like Google, Microsoft,etc.",
-             'status_code': 400}
-
-        return {'message': "Email is verified and message has been sent.", 'status_code': 200}
+        # Sends code 400, if dispose and catch = True or free = False. Sends code 200, if otherwise
+        msg, scode = ("Please use an email address from a free email provider like Google, Microsoft,etc.", 400) if bool(dispose_check) or bool(catch_check) is True or bool(freeCheck) is False else ("Email address verified. Message sent. ", 200)
+        return {'message': msg, 'status_code': scode}
     
     # Exception handlers that prevent the app from breaking down     
     except exceptions.HttpException:
