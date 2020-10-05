@@ -4,4 +4,4 @@ email-verifier
 simplejson
 gunicorn
 flask-compress
-dateutil
+python-dateutil
